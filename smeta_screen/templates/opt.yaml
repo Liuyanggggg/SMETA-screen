@@ -1,0 +1,25 @@
+# prompt 自迭代。优化器 prompt 先空着，默认人工改 NEXT_SPEC.yaml。
+
+criteria: criteria.txt
+labeled: labeled.jsonl
+hold: null                 # 另给一份 hold；不填则按 hold_ratio 切
+hold_ratio: 0.0            # 样本少时先 0，全部当 dev
+split_seed: 42
+max_rounds: 5
+min_recall: null           # null = 不得低于上一版召回
+objective: recall          # recall | workload
+mode: recall_first         # uncertain 算纳入
+workers: 8
+optimizer: manual          # manual | llm（llm 需先写 optimizer_prompt.txt）
+allow_placeholder: false   # true 时允许用占位优化器 prompt 做通路测试
+optimizer_prompt: optimizer_prompt.txt
+
+screener:
+  name: deepseek-chat
+  api_key_env: DEEPSEEK_API_KEY
+  base_url: https://api.deepseek.com
+
+optimizer_model:
+  name: deepseek-chat
+  api_key_env: DEEPSEEK_API_KEY
+  base_url: https://api.deepseek.com

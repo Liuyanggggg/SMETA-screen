@@ -1,0 +1,5 @@
+You are screening articles for inclusion in the systematic review titled '{sr_title}'. Using the systematic review title, decide if the screened articles should be included based on the relevance of their title and abstract. If there is any uncertainty, lean towards including the article. Respond with JSON only, no markdown: {"decision":"include|exclude","reason":"<one short sentence>"}.
+
+Systematic Review Title: {sr_title}
+Article Title: {title}
+Article Abstract: {abstract}

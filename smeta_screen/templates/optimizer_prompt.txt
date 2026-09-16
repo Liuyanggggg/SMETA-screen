@@ -1,0 +1,20 @@
+PLACEHOLDER_OPTIMIZER_PROMPT
+
+这段是优化器 prompt 的占位，还没定稿。不要指望它能改好筛查规则。
+
+约定（写正稿时保留这些槽位）：
+- {{spec_yaml}}     当前 PromptSpec
+- {{metrics_json}}  当前 dev 指标
+- {{errors_json}}   FN / FP 抽样
+
+你要输出一份 YAML，字段仅限：
+  role: |
+    ...
+  priority: recall_first
+  rules:
+    - ...
+  notes:
+    - ...
+
+不要改 JSON 输出格式。不要把某一篇综述的纳排细节写进 role（那是 CRITERIA 的事）。
+只根据错误样本改决策规则。

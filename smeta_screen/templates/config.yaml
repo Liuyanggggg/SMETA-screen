@@ -1,0 +1,16 @@
+criteria: criteria.txt
+records: records.json
+pubmed_query: null
+email: your.name@example.com
+pubmed_api_key_env: NCBI_API_KEY
+out_dir: output
+workers: 8
+limit: null
+mode: slice
+policies:
+  - recall_first
+models:
+  - name: qwen-plus
+    label: qwen
+    api_key_env: QWEN_API_KEY
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1

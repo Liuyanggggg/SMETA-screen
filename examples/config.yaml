@@ -1,0 +1,31 @@
+# 复制到工作目录后改路径和模型。
+# API key 不要写进这个文件，写到 .env 里。
+
+criteria: criteria.txt
+records: records.json          # 支持 json / jsonl / xlsx / csv / ris
+pubmed_query: null             # 若填写，会用 PubMed 官方接口检索（不要爬 Embase）
+email: your.name@example.com
+pubmed_api_key_env: NCBI_API_KEY
+out_dir: output
+workers: 8
+limit: null                    # 试跑时可改成 20
+
+# slice = 每种模型只调用一次，再切出宽松/严格名单（省钱，推荐先用这个）
+# multi_prompt = 每种策略各调用一次（更像“不同 prompt 出不同名单”）
+mode: slice
+policies:
+  - recall_first
+
+models:
+  - name: qwen-plus
+    label: qwen
+    api_key_env: QWEN_API_KEY
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  # - name: deepseek-chat
+  #   label: deepseek
+  #   api_key_env: DEEPSEEK_API_KEY
+  #   base_url: https://api.deepseek.com
+  # - name: gpt-4o-mini
+  #   label: gpt
+  #   api_key_env: OPENAI_API_KEY
+  #   base_url: https://api.openai.com/v1

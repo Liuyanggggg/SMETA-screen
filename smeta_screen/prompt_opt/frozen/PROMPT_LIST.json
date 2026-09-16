@@ -1,0 +1,145 @@
+[
+  {
+    "id": "smeta_recall_first",
+    "source": "SMETA production",
+    "citation": "SMETA recall-first policy (uncertain retained as flagged).",
+    "family": "smeta",
+    "decision_space": "ternary",
+    "selectable": true,
+    "iterable": true,
+    "uses_criteria": true,
+    "note": "Production baseline. Uncertain counts as a first-pass positive."
+  },
+  {
+    "id": "sanghera_none",
+    "source": "Sanghera S1 none",
+    "citation": "Sanghera et al. JAMIA 2025;32:893-904, Supplementary S1, Bias Level: None.",
+    "family": "sanghera",
+    "decision_space": "binary",
+    "selectable": true,
+    "iterable": false,
+    "uses_criteria": true,
+    "note": "S1 default: no inclusion bias. Binary; do not rewrite into ternary rules."
+  },
+  {
+    "id": "sanghera_mild",
+    "source": "Sanghera S1 mild",
+    "citation": "Sanghera et al. JAMIA 2025;32:893-904, Supplementary S1, Bias Level: Mild.",
+    "family": "sanghera",
+    "decision_space": "binary",
+    "selectable": true,
+    "iterable": false,
+    "uses_criteria": true,
+    "note": "S1 mild inclusion bias. Winner of the PMID 40640844 locked-split demonstration."
+  },
+  {
+    "id": "sanghera_moderate",
+    "source": "Sanghera S1 moderate",
+    "citation": "Sanghera et al. JAMIA 2025;32:893-904, Supplementary S1, Bias Level: Moderate.",
+    "family": "sanghera",
+    "decision_space": "binary",
+    "selectable": true,
+    "iterable": false,
+    "uses_criteria": true,
+    "note": "S1 moderate inclusion bias. Missing from the v1 11-item demo; in the frozen list."
+  },
+  {
+    "id": "sanghera_heavy",
+    "source": "Sanghera S1 heavy",
+    "citation": "Sanghera et al. JAMIA 2025;32:893-904, Supplementary S1, Bias Level: Heavy.",
+    "family": "sanghera",
+    "decision_space": "binary",
+    "selectable": true,
+    "iterable": false,
+    "uses_criteria": true,
+    "note": "S1 heavy inclusion bias."
+  },
+  {
+    "id": "sanghera_extreme",
+    "source": "Sanghera S1 extreme",
+    "citation": "Sanghera et al. JAMIA 2025;32:893-904, Supplementary S1, Bias Level: Extreme.",
+    "family": "sanghera",
+    "decision_space": "binary",
+    "selectable": true,
+    "iterable": false,
+    "uses_criteria": true,
+    "note": "S1 extreme inclusion bias. GPT-4o used this rung in Sanghera."
+  },
+  {
+    "id": "sanghera_title",
+    "source": "Sanghera S1 title",
+    "citation": "Sanghera et al. JAMIA 2025;32:893-904, Supplementary S1, Bias Level: Title (control).",
+    "family": "sanghera",
+    "decision_space": "binary",
+    "selectable": true,
+    "iterable": false,
+    "uses_criteria": false,
+    "note": "S1 control: SR title only, no PICOS. Adam: adding selection criteria raises F1 and cuts recall."
+  },
+  {
+    "id": "cao_zeroshot",
+    "source": "Cao Figure 3 zero-shot",
+    "citation": "Cao et al. Ann Intern Med. 2025;178:389-401, Figure 3 zero-shot prompt.",
+    "family": "cao",
+    "decision_space": "binary",
+    "selectable": true,
+    "iterable": false,
+    "uses_criteria": true,
+    "note": "Figure 3 asked YYY/XXX. Mapped to include/exclude. Weighted sensitivity ~49% in Cao."
+  },
+  {
+    "id": "cao_screenprompt",
+    "source": "Cao Abstract ScreenPrompt",
+    "citation": "Cao et al. Ann Intern Med. 2025;178:389-401, Figure 3 Abstract ScreenPrompt (Framework CoT).",
+    "family": "cao",
+    "decision_space": "ternary",
+    "selectable": true,
+    "iterable": true,
+    "uses_criteria": true,
+    "note": "Cao YYY = inclusion advised OR uncertainty persists → include or uncertain. XXX → exclude. Weighted sensitivity ~97.7% in Cao."
+  },
+  {
+    "id": "homiar_pico_yn",
+    "source": "Homiar yes/no PICO",
+    "citation": "Homiar et al. BMJ Ment Health. 2025;28:e301762. Yes/no questions over PICO; 'Return TRUE if…'.",
+    "family": "homiar",
+    "decision_space": "ternary",
+    "selectable": true,
+    "iterable": true,
+    "uses_criteria": true,
+    "note": "Homiar's questions were review-specific. We keep the transferable form: yes/no over PICO elements in {criteria}, not their depression items."
+  },
+  {
+    "id": "rsm_persona",
+    "source": "Adam Table 3 top recall",
+    "citation": "Adam et al. Res Synth Methods. 2026;17:939-956, Table 3 Top R/Sn: 'You are a world-class clinical researcher.'",
+    "family": "rsm",
+    "decision_space": "ternary",
+    "selectable": true,
+    "iterable": true,
+    "uses_criteria": false,
+    "note": "Table 3 top recall is this sentence alone (R/Sn 98.8%, specificity 8.7%). Criteria are NOT injected: Adam found selection criteria +8.1 F1 / −4.7 recall."
+  },
+  {
+    "id": "rsm_f1_methods",
+    "source": "Adam Table 3 top F1",
+    "citation": "Adam et al. Res Synth Methods. 2026;17:939-956, Table 3 Top F1 (methods-focused; contrast, not selectable).",
+    "family": "rsm",
+    "decision_space": "ternary",
+    "selectable": false,
+    "iterable": false,
+    "uses_criteria": true,
+    "note": "Contrast only. Shows the F1-maximising prompt. Must not be chosen as the screening policy."
+  },
+  {
+    "id": "li_assistant",
+    "source": "Li assistant prompt",
+    "citation": "Li, Sun, Tan. Syst Rev. 2024;13:219. Topic + eligibility + abstract; binary yes/no in the paper; we keep uncertain.",
+    "family": "li",
+    "decision_space": "ternary",
+    "selectable": true,
+    "iterable": true,
+    "uses_criteria": true,
+    "note": "Li required yes/no. SMETA first-pass keeps uncertain when the abstract is insufficient."
+  }
+]

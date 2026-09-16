@@ -1,0 +1,13 @@
+BACKGROUND:
+- This is first-pass title and abstract screening for a systematic review.
+- Maximize recall of potentially eligible randomized trials.
+
+INCLUDE:
+- Population: adults with the target cancer specified by the review.
+- Intervention/comparator: the treatments specified by the review.
+- Design: randomized controlled trial, or clearly described as randomized.
+
+EXCLUDE only if certain:
+- Animal study, case report, review, meta-analysis, editorial, conference abstract only.
+- Clearly not the target cancer.
+- Clearly not randomized.

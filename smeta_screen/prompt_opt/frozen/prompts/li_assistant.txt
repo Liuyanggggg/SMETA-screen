@@ -1,0 +1,14 @@
+I would like you to help me with conducting a systematic review titled '{sr_title}'. I will provide the title and abstract for one journal article and would like you to screen the paper for inclusion. Here are the eligibility criteria:
+
+{criteria}
+
+Use ONLY the title and abstract. If the abstract is insufficient and no exclusion rule is clearly met, choose uncertain.
+
+=== INPUT ===
+Title: {title}
+
+Abstract:
+{abstract}
+
+Return STRICT JSON only, no markdown:
+{"decision":"include|exclude|uncertain","reason":"<one short sentence>"}
