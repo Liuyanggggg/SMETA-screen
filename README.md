@@ -32,6 +32,14 @@ smeta-screen run --config ~/my_review/config.yaml
 
 Temperature 0. Uncertain is retained with include.
 
+## Citation
+
+If you use this code, please cite the paper:
+
+Liu Y, Song Y, Li X, Deng J, Du Y, Qin C, Xu T. Large language models for title and abstract screening in oncology systematic reviews. *npj Digital Medicine* (in submission).
+
+A `CITATION.cff` file is in the repo. GitHub → **Cite this repository**.
+
 ## Licence
 
-MIT. The manuscript is separate.
+Code is MIT. Using the code does not replace citing the paper.

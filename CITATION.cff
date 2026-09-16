@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the article below.
+title: smeta-screen
+authors:
+  - family-names: Liu
+    given-names: Yang
+  - family-names: Song
+    given-names: Yuxuan
+  - family-names: Li
+    given-names: Xiaoyang
+  - family-names: Deng
+    given-names: Jiyao
+  - family-names: Du
+    given-names: Yiqing
+  - family-names: Qin
+    given-names: Caipeng
+  - family-names: Xu
+    given-names: Tao
+license: MIT
+preferred-citation:
+  type: article
+  title: "Large language models for title and abstract screening in oncology systematic reviews"
+  authors:
+    - family-names: Liu
+      given-names: Yang
+    - family-names: Song
+      given-names: Yuxuan
+    - family-names: Li
+      given-names: Xiaoyang
+    - family-names: Deng
+      given-names: Jiyao
+    - family-names: Du
+      given-names: Yiqing
+    - family-names: Qin
+      given-names: Caipeng
+    - family-names: Xu
+      given-names: Tao
+  journal: "npj Digital Medicine"
+  year: 2026
+  notes: In submission
