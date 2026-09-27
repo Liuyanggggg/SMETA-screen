@@ -2,6 +2,8 @@
 
 Code for the paper. One frozen recall-first prompt; five vendor APIs; humans read include or uncertain.
 
+![Graphical abstract](ga.png)
+
 ![First-pass action](fig1.png)
 
 Bibliographic records from the source reviews are not in this repository. Use your own records.
