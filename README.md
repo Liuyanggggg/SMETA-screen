@@ -2,7 +2,7 @@
 
 Frozen recall-first title–abstract screening for the SMETA study.
 
-45 oncology randomised-trial meta-analyses, 128,023 unique records, **597 unique final inclusions** (627 inclusions with abstracts). Not 611.
+45 oncology randomised-trial meta-analyses, 128,023 unique records, **597 unique final inclusions**.
 
 Include or uncertain is kept for a person. Temperature 0.
 
