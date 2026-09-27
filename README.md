@@ -1,32 +1,33 @@
-# SMETA-screen
+# Large language models for title and abstract screening in oncology systematic reviews
 
-Frozen recall-first title–abstract screening for the SMETA study.
+Code for the paper. One frozen recall-first prompt; five vendor APIs; humans read include or uncertain.
 
-45 oncology randomised-trial meta-analyses, 128,023 unique records, **597 unique final inclusions**.
+![Graphical abstract](ga.png)
 
-Include or uncertain is kept for a person. Temperature 0.
+![First-pass action](fig1.png)
 
-Bibliographic records from the source reviews are not in this repository.
+Bibliographic records from the source reviews are not in this repository. Use your own records.
 
-## What is here
-
-- `prompts/` — production prompt (`smeta_recall_first.txt`) and the 12 catalogue prompts
-- `data/locked_split.json` — locked 800-record split
-- `data/metrics.csv` — catalogue scores on that split
-- `screen.py` — run the production prompt on your own JSONL
+## Run
 
 ```bash
 export SMETA_API_KEY=...
-export SMETA_MODEL=deepseek-chat          # optional
-export SMETA_BASE=https://api.deepseek.com/v1   # optional
+export SMETA_MODEL=deepseek-chat
+export SMETA_BASE=https://api.deepseek.com/v1
 python3 screen.py criteria.txt records.jsonl out.jsonl
-python3 screen.py --check
 ```
 
-`records.jsonl` lines: `{"id","title","abstract"}`.
+`records.jsonl` lines are `{"id","title","abstract"}`. Temperature is 0. Uncertain is retained with include.
+
+## Paper files
+
+- Production prompt: `prompts/smeta_recall_first.txt`
+- Catalogue prompts: `prompts/`
+- Locked 800-record split: `data/locked_split.json`
+- Catalogue metrics: `data/metrics.csv`
 
 ## Citation
 
-Liu Y, Song Y, Li X, Deng J, Du Y, Qin C, Xu T. Large language models for title and abstract screening in oncology systematic reviews.
+Liu Y, Song Y, Li X, Deng J, Du Y, Qin C, Xu T. Large language models for title and abstract screening in oncology systematic reviews. *npj Digital Medicine* (in submission).
 
-Code is MIT. Citing the paper is separate.
+Code is MIT. Using the code does not replace citing the paper.
