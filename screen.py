@@ -12,7 +12,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-PROMPT = (ROOT / "prompts" / "smeta_recall_first.txt").read_text()
+PROMPT = (ROOT / "smeta_recall_first.txt").read_text()
 VALID = ("include", "exclude", "uncertain")
 
 

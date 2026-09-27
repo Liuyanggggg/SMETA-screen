@@ -2,8 +2,6 @@
 
 Code for the paper. One frozen recall-first prompt; five vendor APIs; humans read include or uncertain.
 
-![Graphical abstract](ga.png)
-
 ![First-pass action](fig1.png)
 
 Bibliographic records from the source reviews are not in this repository. Use your own records.
@@ -21,10 +19,10 @@ python3 screen.py criteria.txt records.jsonl out.jsonl
 
 ## Paper files
 
-- Production prompt: `prompts/smeta_recall_first.txt`
-- Catalogue prompts: `prompts/`
-- Locked 800-record split: `data/locked_split.json`
-- Catalogue metrics: `data/metrics.csv`
+- Production prompt: `smeta_recall_first.txt`
+- Catalogue prompts: the other `.txt` files in this repository
+- Locked 800-record split: `locked_split.json`
+- Catalogue metrics: `metrics.csv`
 
 ## Citation
 
