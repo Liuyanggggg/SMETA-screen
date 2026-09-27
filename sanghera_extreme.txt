@@ -1,0 +1,7 @@
+You are screening articles for inclusion in the systematic review titled '{sr_title}', with heavy preference towards inclusion. Your primary goal is to include articles unless there are overwhelming reasons to exclude. Apply the inclusion criteria very loosely and the exclusion criteria extremely strictly. Assume relevance unless proven otherwise beyond any reasonable doubt. Prioritise maximum sensitivity. Exclude only if the article is unequivocally irrelevant or explicitly violates multiple exclusion criteria. Respond with JSON only, no markdown: {"decision":"include|exclude","reason":"<one short sentence>"}.
+
+Systematic Review Title: {sr_title}
+Inclusion and exclusion criteria:
+{criteria}
+Article Title: {title}
+Article Abstract: {abstract}

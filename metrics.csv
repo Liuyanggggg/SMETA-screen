@@ -1,0 +1,29 @@
+strategy,split,n,gold_pos,tp,fp,fn,n_flagged,recall,recall_lo,recall_hi,precision,workload_cut,note
+smeta_recall_first,test,800,400,381,56,19,437,0.9525,0.927,0.9694,0.8719,0.4537,"locked 800 1:1, scored once"
+sanghera_none,test,800,400,379,54,21,433,0.9475,0.9211,0.9654,0.8753,0.4587,"locked 800 1:1, scored once"
+sanghera_mild,test,800,400,379,50,21,429,0.9475,0.9211,0.9654,0.8834,0.4637,"locked 800 1:1; descriptive, not used for selection"
+sanghera_moderate,test,800,400,381,53,19,434,0.9525,0.927,0.9694,0.8779,0.4575,"locked 800 1:1; descriptive, not used for selection"
+sanghera_heavy,test,800,400,381,55,19,436,0.9525,0.927,0.9694,0.8739,0.455,"locked 800 1:1; descriptive, not used for selection"
+sanghera_extreme,test,800,400,388,67,12,455,0.97,0.9483,0.9828,0.8527,0.4313,"locked 800 1:1; descriptive, not used for selection"
+sanghera_title,test,800,400,349,250,51,599,0.8725,0.8362,0.9017,0.5826,0.2512,"locked 800 1:1; descriptive, not used for selection"
+cao_zeroshot,test,800,400,373,45,27,418,0.9325,0.9036,0.9532,0.8923,0.4775,"locked 800 1:1; descriptive, not used for selection"
+cao_screenprompt,test,800,400,381,63,19,444,0.9525,0.927,0.9694,0.8581,0.445,"locked 800 1:1; descriptive, not used for selection"
+homiar_pico_yn,test,800,400,380,58,20,438,0.95,0.924,0.9674,0.8676,0.4525,"locked 800 1:1; descriptive, not used for selection"
+rsm_persona,test,800,400,355,278,45,633,0.8875,0.8528,0.9149,0.5608,0.2087,"locked 800 1:1; descriptive, not used for selection"
+rsm_f1_methods,test,800,400,374,45,26,419,0.935,0.9065,0.9553,0.8926,0.4762,"locked 800 1:1; descriptive, not used for selection"
+li_assistant,test,800,400,381,53,19,434,0.9525,0.927,0.9694,0.8779,0.4575,"locked 800 1:1; descriptive, not used for selection"
+smeta_recall_first,dev,300,150,143,19,7,162,0.9533,0.9068,0.9772,0.8827,0.46,DEV 300 1:1 after padding; winner not re-selected
+sanghera_none,dev,300,150,143,18,7,161,0.9533,0.9068,0.9772,0.8882,0.4633,DEV 300 1:1 after padding; winner not re-selected
+sanghera_mild,dev,300,150,142,16,8,158,0.9467,0.8983,0.9727,0.8987,0.4733,DEV 300 1:1 after padding; winner not re-selected
+sanghera_moderate,dev,300,150,143,18,7,161,0.9533,0.9068,0.9772,0.8882,0.4633,DEV 300 1:1 after padding; winner not re-selected
+sanghera_heavy,dev,300,150,143,18,7,161,0.9533,0.9068,0.9772,0.8882,0.4633,DEV 300 1:1 after padding; winner not re-selected
+sanghera_extreme,dev,300,150,143,22,7,165,0.9533,0.9068,0.9772,0.8667,0.45,DEV 300 1:1 after padding; winner not re-selected
+sanghera_title,dev,300,150,131,95,19,226,0.8733,0.8106,0.9174,0.5796,0.2467,DEV 300 1:1 after padding; winner not re-selected
+cao_zeroshot,dev,300,150,142,14,8,156,0.9467,0.8983,0.9727,0.9103,0.48,DEV 300 1:1 after padding; winner not re-selected
+cao_screenprompt,dev,300,150,143,25,7,168,0.9533,0.9068,0.9772,0.8512,0.44,DEV 300 1:1 after padding; winner not re-selected
+homiar_pico_yn,dev,300,150,141,22,9,163,0.94,0.8899,0.9681,0.865,0.4567,DEV 300 1:1 after padding; winner not re-selected
+rsm_persona,dev,300,150,138,97,12,235,0.92,0.8654,0.9536,0.5872,0.2167,DEV 300 1:1 after padding; winner not re-selected
+rsm_f1_methods,dev,300,150,141,14,9,155,0.94,0.8899,0.9681,0.9097,0.4833,DEV 300 1:1 after padding; winner not re-selected
+li_assistant,dev,300,150,143,20,7,163,0.9533,0.9068,0.9772,0.8773,0.4567,DEV 300 1:1 after padding; winner not re-selected
+smeta_recall_first,val,66,33,32,5,1,37,0.9697,0.8468,0.9946,0.8649,0.4394,VAL 33/33 after 7 includes moved to DEV
+sanghera_none,val,66,33,32,4,1,36,0.9697,0.8468,0.9946,0.8889,0.4545,VAL 33/33 after 7 includes moved to DEV

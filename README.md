@@ -1,45 +1,32 @@
-# Large language models for title and abstract screening in oncology systematic reviews
+# SMETA-screen
 
-Code for the paper. One frozen recall-first prompt; five vendor APIs; humans read include or uncertain.
+Frozen recall-first title–abstract screening for the SMETA study.
 
-![Graphical abstract](ga.png)
+45 oncology randomised-trial meta-analyses, 128,023 unique records, **597 unique final inclusions** (627 inclusions with abstracts). Not 611.
 
-![First-pass action](fig1.png)
+Include or uncertain is kept for a person. Temperature 0.
 
-Bibliographic records from Embase/Ovid are not in this repo (vendor licence). Use your own RIS/CSV/JSON.
+Bibliographic records from the source reviews are not in this repository.
 
-## Install
+## What is here
+
+- `prompts/` — production prompt (`smeta_recall_first.txt`) and the 12 catalogue prompts
+- `data/locked_split.json` — locked 800-record split
+- `data/metrics.csv` — catalogue scores on that split
+- `screen.py` — run the production prompt on your own JSONL
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e .
+export SMETA_API_KEY=...
+export SMETA_MODEL=deepseek-chat          # optional
+export SMETA_BASE=https://api.deepseek.com/v1   # optional
+python3 screen.py criteria.txt records.jsonl out.jsonl
+python3 screen.py --check
 ```
 
-```bash
-cp .env.example .env   # add API keys
-smeta-screen init --out ~/my_review
-# edit criteria.txt and records.json
-smeta-screen run --config ~/my_review/config.yaml
-```
-
-`--mock` runs the pipeline without API calls.
-
-## Paper artefacts
-
-- Production prompt: `smeta_screen/prompt_opt/frozen/prompts/smeta_recall_first.txt`
-- Locked catalogue of 13 published templates: `smeta_screen/prompt_opt/frozen/`
-
-Temperature 0. Uncertain is retained with include.
+`records.jsonl` lines: `{"id","title","abstract"}`.
 
 ## Citation
 
-If you use this code, please cite the paper:
+Liu Y, Song Y, Li X, Deng J, Du Y, Qin C, Xu T. Large language models for title and abstract screening in oncology systematic reviews.
 
-Liu Y, Song Y, Li X, Deng J, Du Y, Qin C, Xu T. Large language models for title and abstract screening in oncology systematic reviews. *npj Digital Medicine* (in submission).
-
-A `CITATION.cff` file is in the repo. GitHub → **Cite this repository**.
-
-## Licence
-
-Code is MIT. Using the code does not replace citing the paper.
+Code is MIT. Citing the paper is separate.

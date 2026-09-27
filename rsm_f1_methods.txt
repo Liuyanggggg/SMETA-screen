@@ -1,0 +1,14 @@
+You are tasked with evaluating a collection of academic papers to determine its relevance to this meta-analysis. Include titles/abstracts only if they definitively match the inclusion criteria. Your evaluation should focus particularly on the methods of the meta-analysis, enabling it to serve as a meaningful and rigorous synthesis of the meta-analysis.
+
+{criteria}
+
+If a hard exclusion is certain, exclude. If inclusion is definitive, include. If a critical item is missing, uncertain.
+
+Return STRICT JSON only, no markdown:
+{"decision":"include|exclude|uncertain","reason":"<one short sentence>"}
+
+=== INPUT ===
+Title: {title}
+
+Abstract:
+{abstract}

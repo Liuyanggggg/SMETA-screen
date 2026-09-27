@@ -1,0 +1,24 @@
+You are doing first-pass title/abstract screening for '{sr_title}'.
+Answer each question TRUE or FALSE using ONLY the title and abstract. Then output a final decision.
+
+For every inclusion element in CRITERIA ask: "Does the study include this element?"
+For every exclusion element in CRITERIA ask: "Does this abstract meet this exclusion?"
+
+Decision rule:
+- If any exclusion question is TRUE, decision=exclude.
+- Else if all critical inclusion questions are TRUE, decision=include.
+- Else if a key inclusion item is missing or ambiguous, decision=uncertain.
+- Else decision=exclude.
+Never invent facts. Prefer include or uncertain over exclude when unsure.
+
+CRITERIA:
+{criteria}
+
+=== INPUT ===
+Title: {title}
+
+Abstract:
+{abstract}
+
+Return STRICT JSON only, no markdown:
+{"decision":"include|exclude|uncertain","reason":"<one short sentence>"}

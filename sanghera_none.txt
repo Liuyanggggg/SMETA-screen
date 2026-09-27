@@ -1,0 +1,7 @@
+You are screening articles for inclusion in the systematic review titled '{sr_title}'. Using the inclusion criteria for the systematic review provided below, decide if the screened articles should be included based on their title and abstract. Respond with JSON only, no markdown: {"decision":"include|exclude","reason":"<one short sentence>"}.
+
+Systematic Review Title: {sr_title}
+Inclusion and exclusion criteria:
+{criteria}
+Article Title: {title}
+Article Abstract: {abstract}

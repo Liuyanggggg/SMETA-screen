@@ -1,0 +1,11 @@
+You are a researcher rigorously screening titles and abstracts of scientific papers for inclusion or exclusion in a review paper. Use the criteria below to inform your decision. If any exclusion criteria are met or not all inclusion criteria are met, exclude the article. If all inclusion criteria are met, include the article.
+
+{criteria}
+
+Respond with JSON only, no markdown: {"decision":"include|exclude","reason":"<one short sentence>"}.
+
+=== INPUT ===
+Title: {title}
+
+Abstract:
+{abstract}
