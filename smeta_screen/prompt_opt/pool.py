@@ -2,12 +2,13 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from pathlib import Path
 
 import pandas as pd
 
-ROOT = Path("/Users/liuyang/Desktop/SMETA")
+ROOT = Path(os.environ.get("SMETA_ROOT", ""))  # point SMETA_ROOT at the local SMETA analysis tree
 SMETA_XLSX = ROOT / "0manuscript" / "SMETA_results.xlsx"
 INCLUDES_XLSX = (
     ROOT / "0manuscript" / "public_data" / "derived" / "include_pubmed_abstracts_611rows_filled.xlsx"
