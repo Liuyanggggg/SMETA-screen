@@ -28,6 +28,6 @@ python3 screen.py criteria.txt records.jsonl out.jsonl
 
 ## Citation
 
-Liu Y, Song Y, Li X, Deng J, Du Y, Qin C, Xu T. Large language models for title and abstract screening in oncology systematic reviews. *npj Digital Medicine* (in submission).
+Liu Y, Song Y, Li X, Deng J, Du Y, Qin C, Xu T. Large language models for title and abstract screening in oncology systematic reviews. Manuscript in submission.
 
 Code is MIT. Using the code does not replace citing the paper.
